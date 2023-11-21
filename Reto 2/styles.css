@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Skranji&display=swap');
+
+* {
+    font-family: 'Skranji';
+}
+
+body {
+    background-image: url(Fondo.png);;
+}
+
+.container {
+    position: relative;
+    margin: 0 auto;
+    max-width: 680px;
+    text-align: center;
+    width: 67rem;
+    height: 450px;
+    background-color: white;
+    margin: 7rem auto;
+    border-radius: 1rem;
+    padding: 1rem 3rem; 
+}
+
+.slider {
+    display: flex;
+    overflow: hidden;
+}
+
+.slide {
+    flex: 1;
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+    width: 350px;
+    height: 350px;
+    object-fit: contain;
+}
+
+#image-name {
+    background-color: rgba(18, 46, 205, 0.83);;
+    color: white;
+    text-align: center;
+    border-radius: 0.5rem;
+    width: 25%;
+    margin: 1em auto;
+    height: 3em;
+    font-size: 1.1rem;
+    border-color: white;
+    min-width: 50px;
+    padding: 0;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#prev-button {
+    position: absolute;
+    left: 0;
+    border-radius: 100%;
+    width: 4rem;
+    height: 4em;
+    color: white;
+    border-color: blue;
+    background-color: rgba(18, 46, 205, 0.83);
+    text-align: center;
+    margin: -11rem 5rem;
+}
+
+#next-button {
+    position: absolute;
+    right: 0;
+    border-radius: 100%;
+    width: 4rem;
+    height: 4em;
+    color: white;
+    border-color: blue;
+    background-color: rgba(18, 46, 205, 0.83);
+    text-align: center;
+    margin: -11rem 5rem;
+}
+

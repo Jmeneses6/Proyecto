@@ -1,3 +1,28 @@
-* {
-  font-size: 18px;
+body{
+  background-color:lightgray;
+}
+
+
+
+.slide{
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 8%;
+  
+}
+
+.slide img{
+  border-radius: 5%;
+}
+
+h2{
+  text-align: center;
+  display: flex;
+  color:black;
+  font-family: cursive;
+}
+
+#nvr{
+  background-color: rgb(94, 91, 91);
+  font-family: cursive;
 }

@@ -4,9 +4,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
+    
 </head> 
+<header>
+    <nav class="navbar navbar-expand-lg " id="nvr">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="./img/cartel-de-la-calle.png" alt="Bootstrap" width="75" height="54"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">REGISTRO</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  VEHICULOS
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">CARROS</a></li>
+                  <li><a class="dropdown-item" href="#">MOTOS</a></li>
+                  <li><a class="dropdown-item" href="#">CAMIONES</a></li>
+                  <li><a class="dropdown-item" href="#">OTROS</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">INFORMACION</a>
+              </li>
+             
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+              <button class="btn btn-outline-warning" type="submit">Buscar</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+</header>
+<main>
+    <div id="carouselExampleIndicators" class="carousel slide" >
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./img/carro.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./img/moto.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./img/mula.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./img/lancha.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <nav class="navbar bg-none border-bottom border-body" data-bs-theme="dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="./img/coche-deportivo.png" alt="Bootstrap" width="95" height="104">
+            <div>
+                <h2>CARROS</h2>
+            </div>
+          </a>
+          <a class="navbar-brand" href="#">
+            <img src="./img/logoM.png" alt="Bootstrap" width="75" height="94">
+            <div>
+                <h2>MOTOS</h2>
+            </div>
+          </a>
+          <a class="navbar-brand" href="#">
+            <img src="./img/camion-grande.png" alt="Bootstrap" width="145" height="100">
+            <div>
+                <h2 >CAMIONES</h2>
+            </div>
+          </a>
+          <a class="navbar-brand" href="#">
+            <img src="./img/categorias.png" alt="Bootstrap" width="78" height="94">
+            <div>
+                <h2>OTROS</h2>
+            </div>
+          </a>
+        </div>
+      </nav>
+</main>
+<footer>
+    <div>
+        <p>correo</p>
+    </div>
+</footer>
 <body>
     <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

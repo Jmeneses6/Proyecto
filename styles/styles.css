@@ -1,43 +1,46 @@
-body{
-  background-color:lightgray;
+body {
+  background-color: lightgray;
 }
 
 
 
-.slide{
+.slide {
   background-size: cover;
   background-repeat: no-repeat;
   margin: 8%;
- 
-  
+
+
 }
 
-.slide img{
+.slide img {
   border-radius: 5%;
-  
+
 }
 
-h2{
+h2 {
   text-align: center;
   display: flex;
-  color:black;
+  color: black;
   font-family: cursive;
 }
 
-#nvr{
+#nvr {
   background-color: rgb(94, 91, 91);
   font-family: cursive;
 }
 
-#nvr2{
-  
+#nvr2 {
+
   margin: 8%;
 }
 
-.info{
+.info {
+  display: block;
+  margin: 1rem;
+  padding: 2rem;
   text-align: center;
   font-family: cursive;
   background-color: rgb(117, 117, 117);
   color: whitesmoke;
-  
+
 }

@@ -111,35 +111,40 @@ document.addEventListener('DOMContentLoaded', () => {
     // Llama a displayCars al inicio para mostrar los autos existentes
     displayCars();
     
-    function deleteCar(index) {
+    function deleteCar(event) {
+      const index = event.target.getAttribute('data-index');
       let cars = JSON.parse(localStorage.getItem('cars')) || [];
-      
+  
       // Elimina el auto del array
       const deletedCar = cars.splice(index, 1)[0];
-    
+  
       // Actualiza el almacenamiento local
       localStorage.setItem('cars', JSON.stringify(cars));
-    
-      // Vuelve a mostrar la lista de autos
+  
+      // Vuelve a mostrar la lista de autos actualizada
       displayCars();
-    
+  
       // Puedes mostrar un mensaje o realizar otras acciones después de eliminar el auto
       alert(`Auto "${deletedCar.name}" eliminado exitosamente.`);
     }
-    
+  
+    function redirectToPage(type) {
+      window.location.href = `cars-${type}.html`;
+    }
+  
     document.addEventListener('DOMContentLoaded', () => {
       // ...
-    
+  
       // Llama a displayCars al inicio para mostrar los autos existentes
       displayCars();
     });
   
-    buttonBack.addEventListener('click', function() {
-      window.location.href = '../../index.html';
-  });
+    buttonBack.addEventListener('click', function () {
+      window.location.href = 'index.html';
+    });
   
     // Si estamos en la página de imágenes, muestra la lista de autos
-    if (window.location.pathname.includes('../src/pages/cars.html')) {
+    if (window.location.pathname.includes('cars.html')) {
       displayCars();
     }
   });

@@ -11,7 +11,7 @@
   </head>
 
   <header>
-    <nav class="navbar navbar-expand-lg " id="nvr">
+    <nav class="navbar navbar-expand-lg " id="nvr"> 
         <div class="container-fluid">
           <a class="navbar-brand" href="/html/index.html"><img src="/img/cartel-de-la-calle.png" alt="Bootstrap" width="75" height="54"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,12 +39,8 @@
               <li class="nav-item">
                 <a class="nav-link" href="#">INFORMACION</a>
               </li>
-             
+            
             </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-              <button class="btn btn-outline-warning" type="submit">Buscar</button>
-            </form>
           </div>
         </div>
       </nav>
@@ -53,7 +49,7 @@
 
     <h1 id="titulo">Inicio de sesión</h1>
 
-    <form>
+    <form method="get">
       <fieldset class="center">
         <label for="email">Ingresa tu Email: <input id="email" type="email" required /></label>
         <label for="password">Ingresa tu contraseña: <input id="password" type="password" pattern="[a-z0-9]{8,}" required /></label>
@@ -64,7 +60,6 @@
         </label>
       </fieldset>
       <button style="margin-top: -1rem;" type="submit" id="enviar">Enviar</button> 
-      
     </form>
   </main>
   <body>

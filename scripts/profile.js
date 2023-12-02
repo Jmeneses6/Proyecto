@@ -1,6 +1,6 @@
-import DeleteData from "/others/deleteData.js";
-import PutData from "/others/putData.js";
-import { USER } from "/others/url.js";
+import DeleteData from "../helpers/deleteData.js";
+import PutData from "../helpers/putData.js";
+import { USER } from "../helpers/url.js";
 
 let inputName = document.getElementById("name");
 let inputEmail = document.getElementById("email");
@@ -12,9 +12,8 @@ let form = document.querySelector("form");
 
 let infoUser = JSON.parse(sessionStorage.getItem("infoUser"));
 
+//Mostrar datos en el perfil
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("del local está:_ ", infoUser);
-
   const { id, name, password, email } = infoUser;
 
   inputEmail.value = email;
@@ -46,13 +45,13 @@ form.addEventListener("submit", async (e) => {
   await PutData(`${USER}/${id}`, objUser);
 });
 
-btnEliminar.addEventListener("dblclick", (e) => {
+//Eliminar usuario, resetear y mandar al login
+btnEliminar.addEventListener("click", (e) => {
   e.preventDefault();
-  console.log(e);
   let id = e.target.id;
 
   DeleteData(`${USER}/${id}`).then(() => {
-    // alert("Usuario Eliminado exitosamente");
-    window.location.href = "../index.html";
+    form.reset();
+    window.location.href = "/html/login.html";
   });
 });

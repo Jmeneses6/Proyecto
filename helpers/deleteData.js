@@ -1,6 +1,7 @@
 const DeleteData = async (url) => {
   try {
-    await axios.delete(url);    
+    await axios.delete(url);
+    alert  
   } catch (error) {
     console.log(error);
   }

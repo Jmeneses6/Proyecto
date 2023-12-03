@@ -1,27 +1,30 @@
 .custom-card {
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Distribuye el espacio entre la imagen y el contenido */
-    margin-bottom: 50px;
-    font-family: cursive;
-  }
-  
-  .card {
-    width: 30%; /* Ajusta el ancho según tus necesidades */
-    margin: 12px; /* Agrega un poco de margen entre las tarjetas */
-  }
-  
-  .mb-4 {
-    text-align: center;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* Distribuye el espacio entre la imagen y el contenido */
+  margin-bottom: 50px;
+  font-family: cursive;
+}
 
-  }
-  
-  .custom-img {
-    max-width: 100%;
-    height: auto;
-  }
+.card {
+  width: 30%;
+  /* Ajusta el ancho según tus necesidades */
+  margin: 12px;
+  /* Agrega un poco de margen entre las tarjetas */
+}
 
-  h1{
-    font-family: cursive;
-  }
+.mb-4 {
+  text-align: center;
+
+}
+
+.custom-img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1 {
+  font-family: cursive;
+}

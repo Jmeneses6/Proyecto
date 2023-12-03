@@ -7,12 +7,14 @@ body {
   font-family: cursive;
   font-size: 16px;
 }
-h1, p {
+
+h1,
+p {
   margin: 1em auto;
   text-align: center;
 }
 
-#titulo{
+#titulo {
   margin-top: 4rem;
 }
 
@@ -39,13 +41,16 @@ label {
   margin: 0.5rem;
 }
 
-input,textarea,select {
+input,
+textarea,
+select {
   margin: 1rem 0 0 0;
   width: 100%;
   min-height: 2em;
 }
 
-input, textarea {
+input,
+textarea {
   background-color: black;
   border: 1px solid black;
   color: #ffffff;
@@ -60,7 +65,7 @@ input, textarea {
   vertical-align: middle;
 }
 
-#enviar{
+#enviar {
   display: block;
   width: 10rem;
   margin: 1em auto;

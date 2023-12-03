@@ -65,49 +65,49 @@ document.addEventListener('DOMContentLoaded', () => {
   function displayCars() {
     const cars = JSON.parse(localStorage.getItem('cars')) || [];
     const carList = document.getElementById('carList');
-  
+
     if (!carList) {
       console.error('Elemento carList no encontrado en la página.');
       return;
     }
-  
+
     carList.innerHTML = '';
-  
+
     cars.forEach((carData, index) => {
       const card = document.createElement('div');
       card.classList.add('card', 'custom-card');
-  
+
       const cardBody = document.createElement('div');
       cardBody.classList.add('card-body');
-  
+
       const title = document.createElement('h2');
       title.classList.add('card-title');
       title.innerText = carData.name;
       cardBody.appendChild(title);
-  
+
       const description = document.createElement('p');
       description.classList.add('card-text');
       description.innerText = carData.description;
       cardBody.appendChild(description);
-  
+
       const typeParagraph = document.createElement('p');
       typeParagraph.classList.add('card-text');
       typeParagraph.innerText = `Tipo: ${carData.type}`;
       cardBody.appendChild(typeParagraph);
-  
+
       const image = document.createElement('img'); // Elemento img para la imagen
       image.src = carData.image.dataURL; // Establecer la fuente de datos de la imagen
       image.classList.add('card-img-top', 'custom-img'); // Clases de estilo si es necesario
       card.appendChild(image); // Agregar la imagen a la tarjeta
-  
+
       const deleteButton = document.createElement('button');
       deleteButton.classList.add('btn', 'btn-danger');
       deleteButton.innerText = 'Eliminar';
       deleteButton.setAttribute('data-index', index);
-  
+
       deleteButton.addEventListener('click', deleteCar);
       cardBody.appendChild(deleteButton);
-  
+
       card.appendChild(cardBody);
       carList.appendChild(card);
     });

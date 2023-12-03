@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const vehicleType = window.location.pathname.split('-')[1];
 
+  // Si estamos en la página de formulario
   if (document.getElementById('carForm')) {
     const carForm = document.getElementById('carForm');
 
@@ -29,24 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
           };
 
           saveCar(carData);
-
-          // Redirige según el tipo de vehículo seleccionado
-          switch (carType) {
-            case 'carro':
-              window.location.href = `cars-carro.html`;
-              break;
-            case 'moto':
-              window.location.href = `cars-moto.html`;
-              break;
-            case 'camion':
-              window.location.href = `cars-camion.html`;
-              break;
-            case 'otros':
-              window.location.href = `cars-otros.html`;
-              break;
-            default:
-              break;
-          }
+          // Después de guardar, redirige a la página específica de imágenes
+          window.location.href = `cars-${carType}.html`;
         };
 
         reader.readAsDataURL(carImage);
@@ -62,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem('cars', JSON.stringify(cars));
   }
 
-  function displayCars() {
+  function displayMotos() {
     const cars = JSON.parse(localStorage.getItem('cars')) || [];
     const carList = document.getElementById('carList');
 
@@ -73,9 +58,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     carList.innerHTML = '';
 
-    cars.forEach((carData, index) => {
+    const filteredMotos = cars.filter(carData => carData.type === 'moto');
+
+    filteredMotos.forEach((carData, index) => {
       const card = document.createElement('div');
       card.classList.add('card', 'custom-card');
+
+      const imgElement = document.createElement('img');
+      imgElement.src = carData.image.dataURL;
+      imgElement.classList.add('card-img-top', 'custom-img');
+      card.appendChild(imgElement);
 
       const cardBody = document.createElement('div');
       cardBody.classList.add('card-body');
@@ -90,27 +82,52 @@ document.addEventListener('DOMContentLoaded', () => {
       description.innerText = carData.description;
       cardBody.appendChild(description);
 
+      // Agrega el tipo de vehículo a la descripción
       const typeParagraph = document.createElement('p');
       typeParagraph.classList.add('card-text');
       typeParagraph.innerText = `Tipo: ${carData.type}`;
       cardBody.appendChild(typeParagraph);
 
-      const image = document.createElement('img'); // Elemento img para la imagen
-      image.src = carData.image.dataURL; // Establecer la fuente de datos de la imagen
-      image.classList.add('card-img-top', 'custom-img'); // Clases de estilo si es necesario
-      card.appendChild(image); // Agregar la imagen a la tarjeta
-
+      // Agrega el botón de eliminar con el atributo data-index
       const deleteButton = document.createElement('button');
       deleteButton.classList.add('btn', 'btn-danger');
       deleteButton.innerText = 'Eliminar';
       deleteButton.setAttribute('data-index', index);
-
       deleteButton.addEventListener('click', deleteCar);
       cardBody.appendChild(deleteButton);
 
       card.appendChild(cardBody);
+
       carList.appendChild(card);
     });
   }
-}
-)  
+
+  function deleteCar(event) {
+    const index = event.target.getAttribute('data-index'); // Cambiado de 'carro' a 'data-index'
+    let cars = JSON.parse(localStorage.getItem('cars')) || [];
+
+    // Elimina el auto del array
+    const deletedCar = cars.splice(index, 1)[0];
+
+    // Actualiza el almacenamiento local
+    localStorage.setItem('cars', JSON.stringify(cars));
+
+    // Vuelve a mostrar la lista de autos actualizada
+    displayMotos();
+
+    // Puedes mostrar un mensaje o realizar otras acciones después de eliminar el auto
+    alert(`Auto "${deletedCar.name}" eliminado exitosamente.`);
+  }
+
+  // Si estamos en la página específica de imágenes de motos, muestra la lista de motos
+  if (window.location.pathname.includes(`cars-moto.html`)) {
+    displayMotos();
+  }
+
+  const buttonBack = document.getElementById('buttonBack');
+  if (buttonBack) {
+    buttonBack.addEventListener('click', function () {
+      window.location.href = `../pages/form.html`;
+    });
+  }
+});

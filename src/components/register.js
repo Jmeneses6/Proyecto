@@ -1,5 +1,5 @@
-import Postdata from "../helpers/postData";
-import { USER } from "../helpers/url";
+import Postdata from "../helpers/postData.js";
+import { USER } from "../helpers/url.js";
 
 const form = document.querySelector("form");
 

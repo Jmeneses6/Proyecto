@@ -52,6 +52,7 @@ btnEliminar.addEventListener("click", (e) => {
 
   DeleteData(`${USER}/${id}`).then(() => {
     form.reset();
-    window.location.href = "../pages/login";
+    window.location.href = "../pages/login.html";
+    alert("Usuario Eliminado Correctamente")
   });
 });

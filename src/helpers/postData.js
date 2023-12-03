@@ -1,10 +1,10 @@
 const Postdata = async (url, datos) => {
-    try {
-      await axios.post(url, datos);
-      alert("Usuario Creado exitosamente");
-      window.location.href = "../html/login.html";
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  export default Postdata;
+  try {
+    await axios.post(url, datos);
+    window.location.href = "../pages/login.html";
+    alert("Usuario Creado exitosamente");
+  } catch (error) {
+    console.log(error);
+  }
+};
+export default Postdata;

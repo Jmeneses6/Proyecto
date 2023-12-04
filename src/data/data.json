@@ -23,6 +23,12 @@
       "name": "mateo",
       "email": "mateolr@outlook.com",
       "password": "123456qwe"
+    },
+    {
+      "id": 83,
+      "name": "juanes loaiza",
+      "email": "juanes@gmail.com",
+      "password": "juanes123"
     }
   ],
   "Vehiculos": [

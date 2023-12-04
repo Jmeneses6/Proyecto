@@ -12,102 +12,102 @@
     <link rel="icon" href="Img/Icon.png">
 </head>
 
-<header>
-    <nav class="navbar navbar-expand-lg " id="nvr">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/index.html"><img src="/img/cartel-de-la-calle.png" alt="Bootstrap" width="75"
-                    height="54"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../../index.html">HOME</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./registro.html">REGISTRO</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            VEHICULOS
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="">CARROS</a></li>
-                            <li><a class="dropdown-item" href="#">MOTOS</a></li>
-                            <li><a class="dropdown-item" href="#">CAMIONES</a></li>
-                            <li><a class="dropdown-item" href="#">OTROS</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contacto">INFORMACION</a>
-                    </li>
 
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>
-<main>
 
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg " id="nvr">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/index.html"><img src="/img/cartel-de-la-calle.png" alt="Bootstrap" width="75"
+                        height="54"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../../index.html">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./registro.html">REGISTRO</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                VEHICULOS
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="">CARROS</a></li>
+                                <li><a class="dropdown-item" href="#">MOTOS</a></li>
+                                <li><a class="dropdown-item" href="#">CAMIONES</a></li>
+                                <li><a class="dropdown-item" href="#">OTROS</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contacto">INFORMACION</a>
+                        </li>
     
-
-    <div class="card-body">
-        <div class="container mt-5">
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <div class="card text-center">
-                        <div class="card-header">
-
-                            <h1 id="titulo">Inicio de sesión</h1>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+    
+        <div class="card-body">
+            <div class="container mt-5">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="card text-center">
+                            <div class="card-header">
+    
+                                <h1 id="titulo">Inicio de sesión</h1>
+                            </div>
+    
+                            <form method="get">
+                                <fieldset class="center">
+                                    <div class="col-md-12">
+                                        <label for="email">Ingresa tu Email: </label>
+                                        <input id="email" type="email" class="form-control" required />
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label for="password">Ingresa tu contraseña: </label>
+                                        <input id="password" type="password" class="form-control" pattern="[a-z0-9]{8,}"
+                                            required />
+                                        <input type="checkbox" id="showPassword">
+                                    </div>
+    
+    
+                                </fieldset>
+                                <fieldset>
+                                    <div class="col-md-12">
+                                        <p>¿Aun no tienes cuenta? <a href="./registro.html">Ingresa aquí</a></p></label>
+                                        </label>
+                                    </div>
+    
+                                </fieldset>
+                                <button style="margin-top: -1rem;" type="submit" id="enviar">Enviar</button>
+                            </form>
+    
                         </div>
-
-                        <form method="get">
-                            <fieldset class="center">
-                                <div class="col-md-12">
-                                    <label for="email">Ingresa tu Email: </label>
-                                    <input id="email" type="email" class="form-control" required />
-                                </div>
-                                <div class="col-md-12">
-                                    <label for="password">Ingresa tu contraseña: </label>
-                                    <input id="password" type="password" class="form-control" pattern="[a-z0-9]{8,}"
-                                        required />
-                                    <input type="checkbox" id="showPassword">
-                                </div>
-
-
-                            </fieldset>
-                            <fieldset>
-                                <div class="col-md-12">
-                                    <p>¿Aun no tienes cuenta? <a href="./registro.html">Ingresa aquí</a></p></label>
-                                    </label>
-                                </div>
-
-                            </fieldset>
-                            <button style="margin-top: -1rem;" type="submit" id="enviar">Enviar</button>
-                        </form>
-
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</main>
-
-<footer class="info">
-    <div>
-        <h5 id="contacto">CONTACTO CON NUESTRA SEDE: (604)444-44-44 EXT:555</h5>
-        <h5>CELULAR: 322-514-22-58 </h5>
-        <h5>CORREO: vendetukenworth@gmail.com</h5>
-        <h5>DIRECCION: CR-66B #54C-78</h5>
-        &copy; 2023 - Página creada por vendetukenworth - Todos los derechos reservados
-    </div>
-</footer>
-
-<body>
+    </main>
+    
+    <footer class="info">
+        <div>
+            <h5 id="contacto">CONTACTO CON NUESTRA SEDE: (604)444-44-44 EXT:555</h5>
+            <h5>CELULAR: 322-514-22-58 </h5>
+            <h5>CORREO: vendetukenworth@gmail.com</h5>
+            <h5>DIRECCION: CR-66B #54C-78</h5>
+            &copy; 2023 - Página creada por vendetukenworth - Todos los derechos reservados
+        </div>
+    </footer>
 
 
     <script src="../components/main.js"></script>
